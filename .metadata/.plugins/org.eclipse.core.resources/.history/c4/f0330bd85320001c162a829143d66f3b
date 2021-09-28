@@ -1,0 +1,30 @@
+
+class Landen {
+	public static enum landen {
+		SURINAME, NEDERLAND
+	}
+}
+
+class Districten extends Landen {
+
+	public static enum districten {
+		PARAMARIBO, NICKERIE, AMSTERDAM, ALMERE
+	}
+
+	public static void KiesDistrict(districten district) {
+		if (district.equals(districten.PARAMARIBO) || district.equals(districten.NICKERIE)) {
+			System.out.println("Land: " + landen.SURINAME);
+		}
+	}
+}
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Districten.KiesDistrict(Districten.districten.NICKERIE);
+		
+		
+
+	}
+}

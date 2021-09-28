@@ -1,0 +1,10 @@
+package sr.bludots.memory;
+
+public class FileBluDots {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

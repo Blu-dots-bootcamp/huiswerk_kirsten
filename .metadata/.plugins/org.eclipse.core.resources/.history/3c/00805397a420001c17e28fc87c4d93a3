@@ -1,0 +1,17 @@
+package bestbucketlist2022;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class IdeaList {
+
+	public static void main(String[] args) {
+		
+		List<String> destination = new ArrayList<String>();
+
+		destination.add(new destination("Grand Theft", Category.ADVENTURE, Level.MODERATE));
+		destination.add(new Game("FIFA 2020", Category.SPORT, Level.MODERATE));
+		destination.add(new OnlineGame("World of warcraft", Category.ADVENTURE, Level.DIFFICULT
+	}
+
+}

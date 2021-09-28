@@ -1,0 +1,18 @@
+package com.assignments;
+
+import java.util.ArrayList;
+
+public class Atleet {
+	public void birthdaybetween2000en2002(ArrayList<OlympicAtleten> atletenList) {
+		int a = 0;
+		for(int i = 0; i < atletenList.size(); i++) {
+			
+					if(atletenList.get(i).getgeboortedatum().getYear() >= 2000 &&
+							atletenList.get(i).getgeboortedatum().getYear() <= 2002) {
+						a++;
+					}
+				}
+				System.out.println("Aantal spelers geboren tussen 2000 en 2002: " + a);
+			}
+
+}

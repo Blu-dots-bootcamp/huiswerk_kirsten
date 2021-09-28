@@ -1,0 +1,12 @@
+package bestbucketlist2022;
+
+public class destinations {
+
+	public static enum Country {
+		SURINAME, INDONESIA, INDIA, BORA_BORA;
+	}
+	
+	public static enum Sightseeing {
+		BLANCHE_MARIEFALLS, BALI, THE_TAJ_MAHAL, FRENCH_POLYNESIA
+	}
+}

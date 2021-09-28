@@ -1,0 +1,23 @@
+package BigList;
+
+import java.util.ArrayList;
+
+
+/* 
+ * Deze class defineert een List met ideas
+ * 
+ */
+public class ListIdeas {
+	
+
+	public 
+	
+	
+	public void vertoonAdventures() {
+
+		System.out.println("Random idea of my BucketList : ");
+		System.out.println("Where to visit	: " + getIdeas());
+		System.out.println("Location : " + getLocation());
+		System.out.println();
+	}
+}

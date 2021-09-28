@@ -1,0 +1,17 @@
+
+class Landen {
+	private static enum landen {
+		SURINAME, NEDERLAND
+	}
+}
+
+class Districten extends Landen {
+
+}
+
+public class Main {
+
+	public static void main(String[] args) {
+
+	}
+}

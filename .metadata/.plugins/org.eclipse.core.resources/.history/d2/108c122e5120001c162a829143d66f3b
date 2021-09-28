@@ -1,0 +1,11 @@
+
+public class Main {
+
+	public static enum Category {
+		SPORT, ADVENTURE, ACTION, BOARD
+	}
+
+	public static void main(String[] args) {
+
+	}
+}

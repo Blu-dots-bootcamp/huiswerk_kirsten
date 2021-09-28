@@ -1,0 +1,15 @@
+package vehicle2021;
+
+public class Vehicle {
+	//attribute that a vehicle has
+	
+	double speed;
+	
+	void go() {
+		System.out.println("This vehicle is moving");
+	}
+	
+	void stop() {
+		System.out.println("This vehicle is stopped");
+	}
+}

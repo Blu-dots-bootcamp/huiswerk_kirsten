@@ -1,0 +1,121 @@
+package com.assignment;
+
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
+public class Atleet {
+	// Assignment 1: Maak een lijst van 50 atleten.
+	// Vul ze steeds met andere sporten, dus bijv een aantal boksers, voetballers
+	// etc ec
+	// Maak deze ook aan met een variabel geboortejaar (tussen 1990-2005))
+
+	// - zoek naar alle atleten die zwemmen en druk deze dan af
+	// - zoek naar alle atleten die jair heten en zwemmen en druk deze dan af
+	// vul de
+	// (*) zoek naar alle atleten die jonger zijn dan 20 jaar
+	public enum Sport {
+		TRACKCYCLING, ZWEMMEN, TAEKWONDO, ARCHERY, BOKSEN
+	};
+
+	private String voorNaam;
+	private String achterNaam;
+	private LocalDate geboorteDatum;
+	private Sport sport;
+
+	/*
+	 * Atleet constructor: Create a new atleet, .
+	 */
+	public Atleet(String voorNaam, String achterNaam, LocalDate geboorteDatum, Sport sport) {
+		super();
+		this.voorNaam = voorNaam;
+		this.achterNaam = achterNaam;
+		this.geboorteDatum = geboorteDatum;
+		this.sport = sport;
+	}
+
+	public String getvoorNaam() {
+		return voorNaam;
+	}
+
+	public void setvoorNaam(String voornaam) {
+		this.voorNaam = voorNaam;
+	}
+
+	public String getachterNaam() {
+		return achterNaam;
+	}
+
+	public void setachterNaam(String achternaam) {
+		this.achterNaam = achterNaam;
+	}
+
+	public LocalDate getgeboorteDatum() {
+		return geboorteDatum;
+	}
+
+	public void setgeboorteDatum(LocalDate geboorteDatum) {
+		this.geboorteDatum = geboorteDatum;
+	}
+
+	public Sport getSport() {
+		return sport;
+	}
+
+	public void setSport(Sport sport) {
+		this.sport = sport;
+	}
+
+	// age calculatie bepalen
+	public int getAge() {
+		LocalDate current = LocalDate.now();
+
+		LocalDate years = current.minusYears(geboorteDatum.getYear());
+
+		return years.getYear();
+	}
+
+	//
+	public static void main(String[] arg) {
+		Atleet atleet1 = new Atleet("Jair", "Tjon en Fa", LocalDate.of(1994, 4, 1), Sport.ZWEMMEN);
+		System.out.println("Atleet " + atleet1.getachterNaam() + " Leeftijd: " + atleet1.getAge());
+
+		ArrayList<Atleet> atleten = new ArrayList<>();
+
+		for (int i = 0; i < 50; i++) {
+
+			Random random = new Random();
+			String[] voorNamen = { "Jair", "Renzo", "Kenz", "Abigail" };// 4 elementen aangegeven
+			int nummervoorNaam = random.nextInt(4);
+
+			String[] achterNamen = { "Tjon en Fa", "van Brussel", "Doorson", "Douglas" }; // 4 elementen
+			int nummerachterNaam = random.nextInt(4);
+
+// random sport word gekozen
+			Sport nieuwSport = null;
+			int ranGetal = random.nextInt(5);
+			if (ranGetal == 0) {
+				nieuwSport = Sport.TRACKCYCLING;
+			} else if (ranGetal == 1) {
+				nieuwSport = Sport.ZWEMMEN;
+			} else if (ranGetal == 2) {
+				nieuwSport = Sport.TAEKWONDO;
+			} else if (ranGetal == 3) {
+				nieuwSport = Sport.ARCHERY;
+			} else if (ranGetal == 4) {
+				nieuwSport = Sport.BOKSEN;
+			}
+			// verjaardag datum
+			int dag = random.nextInt(27) + 1;
+			int maand = random.nextInt(12) + 1;
+			int jaar = random.nextInt(2005 - 1990) + 1990;
+			Atleet atleet = new Atleet(voorNamen[nummervoorNaam], achterNamen[nummerachterNaam],
+					LocalDate.of(jaar, maand, dag), nieuwSport);
+//
+//			System.out.println(atleten.toString());
+			
+			System.out.println();
+		}
+	}
+}

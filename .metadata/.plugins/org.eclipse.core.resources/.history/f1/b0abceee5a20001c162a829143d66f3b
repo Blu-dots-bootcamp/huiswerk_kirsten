@@ -1,0 +1,30 @@
+package BigList;
+
+import java.util.ArrayList;
+import java.util.Random;
+
+
+
+public class MyBucketList {
+
+	public static void main(String[] args) {
+		//  create list with ideas of places to visit
+		ArrayList<String> ideas = new ArrayList<>();
+		Random ideasList = new Random();
+		
+		ideas.add("Niagara Falls - Canada");
+		ideas.add("Venice - Italy");
+		ideas.add("New York City - USA");
+		ideas.add("Bora Bora - French Polynesia");
+		ideas.add("Paris - France");
+		ideas.add("The Taj Mahal - India");	
+		
+		int idea = ideasList.nextInt(6);
+		
+		System.out.println(ideas);
+		System.out.println("My next BucketList adventure: " + ideas.get(idea));
+		System.out.println("Location: ") ;
+	}
+
+	}
+

@@ -1,0 +1,14 @@
+package bestbucketlist2022;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class IdeaList {
+
+	public static void main(String[] args) {
+		
+		List<> destination = new ArrayList<E>();
+
+	}
+
+}

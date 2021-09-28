@@ -1,0 +1,15 @@
+package bootcamp;
+
+import java.util.Scanner;
+
+public class Magicball {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("Enter your question");
+		
+		Scanner scan = new Scanner(System.in);
+		scan.next();
+	}
+
+}
